@@ -1,0 +1,156 @@
+// main: ../style.less
+
+.reg {
+    width: 100%;
+    height: 100%;
+}
+
+.reg__inner {
+    padding: 30px;
+    margin: 30px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, height .1s ease-in-out;
+
+    overflow: hidden;
+
+    &:hover {
+        border-color: green;
+        box-shadow: 0 0 30px green;
+    }
+}
+
+.reg__type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reg__text {
+    font-size: 20px;
+    font-weight: 300;
+
+    position: relative;
+
+    color: black;
+
+    // border-bottom: 1px solid black;
+
+    margin-bottom: 30px;
+
+    &::after {
+        content: "";
+
+        height: 3px;
+        width: 100%;
+
+        background: black;
+
+        position: absolute;
+
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.reg__input {
+    font-size: 15px;
+
+    height: 40px;
+    width: calc(100% / 2);
+
+    text-align: center;
+
+    outline: none;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+    transition: border-color .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out;
+
+    &:hover {
+        border-color: green;
+        background: black;
+        color: white;
+    }
+
+    &:focus {
+        border-color: black;
+        background: green;
+        color: black;
+    }
+}
+
+.reg__button {
+    outline: none;
+
+    margin-right: 50px;
+
+    cursor: pointer;
+    
+    padding: 10px;
+
+    width: 260px;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    background: white;
+    
+    color: black;
+
+    font-size: 20px;
+
+    transition: border-color .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out, transform .1s ease-in-out;
+
+    &:hover {
+        border-color: green;
+        background: black;
+        color: white;
+    }
+
+    &:active {
+        transform: scale(.75);
+    }
+}
+
+.reg__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reg__auth {
+    text-align: center;
+
+    text-decoration: none;
+
+    color: black;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    padding: 10px;
+
+    font-size: 20px;
+
+    width: 260px;
+
+    transition: border-color .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out, transform .1s ease-in-out;
+
+    &:hover {
+        border-color: green;
+        background: black;
+        color: white;
+    }
+
+    &:active {
+        transform: scale(.75);
+    }
+}

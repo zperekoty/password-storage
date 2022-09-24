@@ -1,0 +1,154 @@
+// main: ../style.less
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    z-index: 10;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, .7);
+
+    // opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity .3s ease-in-out;
+
+    // &.active {
+    //     display: flex;
+
+    //     opacity: 1;
+    // }
+}
+
+.modal__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 60%;
+    
+    padding: 30px;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    background: #fffa;
+
+    // transform: translateY(-100vh);
+
+    transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out, transform .3s ease-in-out;
+
+    &:hover {
+        border-color: green;
+        box-shadow: 0 0 20px green;
+    }
+}
+
+.modal__input {
+    font-size: 15px;
+
+    height: 40px;
+    width: 80%;
+
+    text-align: center;
+
+    outline: none;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+    transition: border-color .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out;
+
+    &:hover {
+        border-color: green;
+        background: black;
+        color: white;
+    }
+
+    &:focus {
+        border-color: black;
+        background: green;
+        color: black;
+    }
+}
+
+.modal__btns {
+    flex-direction: row;
+    align-items: center;
+}
+
+.modal__btn {
+    outline: none;
+
+    // margin-right: 50px;
+
+    cursor: pointer;
+    
+    padding: 10px;
+
+    width: 260px;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    background: white;
+    
+    color: black;
+
+    font-size: 20px;
+
+    transition: border-color .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out, transform .1s ease-in-out;
+
+    &:hover {
+        border-color: green;
+        background: black;
+        color: white;
+    }
+
+    &:active {
+        transform: scale(.75);
+    }
+}
+
+.modal__btn__close {
+    outline: none;
+
+    margin-left: 50px;
+
+    cursor: pointer;
+    
+    padding: 10px;
+
+    width: 260px;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    background: white;
+    
+    color: black;
+
+    font-size: 20px;
+
+    transition: border-color .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out, transform .1s ease-in-out;
+
+    &:hover {
+        border-color: rgb(220, 46, 46);
+        background: black;
+        color: rgb(220, 46, 46);
+    }
+
+    &:active {
+        transform: scale(.75);
+    }
+}
